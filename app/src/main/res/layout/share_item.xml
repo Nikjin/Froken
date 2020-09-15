@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_marginTop="@dimen/_8sdp"
+    android:layout_height="wrap_content">
+
+
+
+    <RelativeLayout
+        android:id="@+id/r1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/user_image"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_margin="@dimen/_10sdp"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_18sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_toEndOf="@+id/user_image"
+
+            android:fontFamily="@font/poppins"
+            android:text="@string/username"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_18sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_40sdp"
+
+
+            android:fontFamily="@font/poppins"
+            android:text="12th March 2019"
+            android:textSize="12sp"
+            tools:ignore="UnknownId" />
+
+        <TextView
+            android:id="@+id/cat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/date"
+            android:layout_alignTop="@+id/date"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_19sdp"
+            android:layout_marginEnd="@dimen/_40sdp"
+
+
+            android:fontFamily="@font/poppins"
+            android:text="Faith"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/_10sdp"
+
+            app:srcCompat="@drawable/ic_more" />
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/r1"
+        android:id="@+id/r2"
+        tools:ignore="NotSibling"
+        android:layout_marginLeft="@dimen/_12sdp">
+
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:fontFamily="@font/poppins"
+            android:hint="@string/fefwnfmnfqnefmeqmfvfwtqefdhtrgfahwewgehrgg"
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_180sdp"
+            android:layout_below="@+id/title"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@drawable/card_bg"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:id="@+id/r3">
+
+
+            <RelativeLayout
+                android:layout_width="@dimen/_130sdp"
+                android:layout_height="@dimen/_150sdp"
+                android:id="@+id/r4"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:background="@drawable/card_bg"
+                android:layout_marginTop="@dimen/_11sdp">
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/post_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@mipmap/ic_launcher"
+                    />
+
+
+            </RelativeLayout>
+
+
+
+
+
+
+            <RelativeLayout
+                android:layout_width="@dimen/_140sdp"
+                android:layout_height="@dimen/_150sdp"
+                android:layout_toEndOf="@+id/r4"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/_11sdp"
+                android:layout_marginEnd="@dimen/_11sdp"
+                android:layout_marginLeft="1dp"
+                android:id="@+id/r5">
+
+
+                <com.wajahatkarim3.easyflipview.EasyFlipView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:flipOnTouch="false"
+                    app:flipEnabled="true"
+                    app:flipDuration="1000"
+                    app:flipType="vertical"
+                    app:flipFrom="front"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:id="@+id/flipView"
+                    >
+
+                    <!-- Back Layout Goes Here -->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/publisher_image"
+                            android:layout_width="@dimen/_17sdp"
+                            android:layout_height="@dimen/_17sdp"
+                            android:layout_margin="@dimen/_8sdp"
+
+                            android:src="@mipmap/ic_launcher" />
+
+                        <TextView
+                            android:id="@+id/tv_username"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@+id/publisher_image"
+                            android:layout_centerVertical="true"
+
+                            android:fontFamily="@font/poppins"
+                            android:text="Username"
+                            android:textColor="@android:color/black"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/tv_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/tv_username"
+                            android:layout_marginLeft="@dimen/_5sdp"
+
+
+
+                            android:fontFamily="@font/poppins"
+                            android:text="12th March 2019"
+                            android:textSize="8sp"
+                            tools:ignore="UnknownId" />
+
+                    </RelativeLayout>
+                    <!-- Front Layout Goes Here -->
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_17sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginBottom="@dimen/_8sdp"
+                        android:background="@drawable/flip_card_view_white"/>
+
+
+                </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+
+
+
+
+
+
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="@dimen/_130sdp"
+                    android:layout_height="@dimen/_100sdp"
+                    android:layout_below="@id/flipView"
+
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_8sdp"
+
+                    android:fontFamily="@font/poppins"
+                    android:lineSpacingExtra="@dimen/_5sdp"
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
+                    android:textColor="@color/content_text_color"
+                    android:textSize="16sp" />
+
+
+
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/r6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_below="@id/r2"
+        android:layout_marginEnd="@dimen/_10sdp"
+
+        android:padding="@dimen/_7sdp">
+
+        <ImageView
+            android:id="@+id/like"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:src="@drawable/ic_like" />
+
+        <TextView
+            android:id="@+id/likes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_7sdp"
+            android:layout_toEndOf="@+id/like"
+            android:gravity="center_vertical"
+
+            android:fontFamily="@font/poppins"
+            android:text="130"
+            android:textColor="#FF000000"
+            android:alpha="0.5"
+            android:textStyle="bold" />
+
+
+        <ImageView
+            android:id="@+id/comment"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_18sdp"
+            android:layout_toEndOf="@id/likes"
+            android:layout_marginTop="@dimen/_1sdp"
+
+            android:src="@drawable/ic_ncomment" />
+
+        <TextView
+            android:id="@+id/comments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_7sdp"
+            android:layout_toEndOf="@+id/comment"
+            android:gravity="center_vertical"
+
+            android:fontFamily="@font/poppins"
+            android:text="130"
+            android:textColor="#FF000000"
+            android:alpha="0.5"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="@font/poppins"
+            android:text="3 mins ago"
+
+            android:textSize="10sp" />
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+</RelativeLayout>

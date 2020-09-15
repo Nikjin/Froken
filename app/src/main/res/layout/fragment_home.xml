@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F7F7"
+    tools:context=".Fragment.HomeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+   <com.google.android.material.appbar.AppBarLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:id="@+id/bar"
+       app:elevation="0dp"
+       tools:ignore="InvalidId"
+       android:background="#F7F7F7">
+
+       <androidx.appcompat.widget.Toolbar
+           android:id="@+id/toolbar"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           app:contentInsetLeft="0dp"
+           app:contentInsetStart="0dp"
+           android:background="#F7F7F7"
+           android:layout_marginTop="@dimen/_10sdp"
+           app:contentInsetStartWithNavigation="0dp">
+
+
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:id="@+id/rel"
+               android:background="@color/white">
+
+
+
+
+
+
+
+               <RelativeLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal"
+                   android:layout_below="@+id/lf"
+                   android:layout_marginStart="@dimen/_7sdp"
+                   android:id="@+id/l1">
+
+                   <TextView
+                       android:id="@+id/known"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_alignTop="@+id/l1"
+                       android:layout_centerVertical="true"
+                       android:alpha="1"
+                       android:clickable="true"
+                       android:fontFamily="@font/poppins"
+
+                       android:paddingLeft="@dimen/_10sdp"
+                       android:paddingTop="@dimen/_8sdp"
+                       android:paddingBottom="@dimen/_10sdp"
+                       android:paddingRight="@dimen/_10sdp"
+                       android:text="Known"
+                       android:textAlignment="center"
+                       android:textColor="#272727"
+                       android:textSize="22sp"
+                       android:textStyle="bold" />
+
+
+                   <TextView
+                       android:id="@+id/anonymous"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:clickable="true"
+                       android:fontFamily="@font/poppins"
+                       android:paddingLeft="@dimen/_10sdp"
+                       android:paddingTop="@dimen/_8sdp"
+                       android:paddingBottom="@dimen/_10sdp"
+                       android:paddingRight="@dimen/_10sdp"
+                       android:alpha="0.6"
+                       android:layout_centerVertical="true"
+                       android:textStyle="bold"
+
+                       android:layout_toEndOf="@+id/known"
+                       android:text="Anonymous"
+                       android:textAlignment="center"
+                       android:textAllCaps="false"
+                       android:textColor="#272727"
+                       android:textSize="16sp" />
+
+                   <TextView
+                       android:id="@+id/shared"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:clickable="true"
+                       android:fontFamily="@font/poppins"
+                       android:paddingLeft="@dimen/_10sdp"
+                       android:paddingTop="@dimen/_8sdp"
+                       android:paddingBottom="@dimen/_10sdp"
+                       android:paddingRight="@dimen/_10sdp"
+                       android:alpha="0.6"
+                       android:layout_centerVertical="true"
+                       android:textStyle="bold"
+
+                       android:layout_toEndOf="@+id/anonymous"
+                       android:text="Shared"
+                       android:textAlignment="center"
+                       android:textAllCaps="false"
+                       android:textColor="#272727"
+                       android:textSize="16sp" />
+
+
+
+
+                   <ImageView
+                       android:id="@+id/nofilter"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_centerVertical="true"
+                       android:paddingLeft="@dimen/_10sdp"
+                       android:paddingTop="@dimen/_10sdp"
+                       android:paddingBottom="@dimen/_13sdp"
+                       android:paddingRight="@dimen/_13sdp"
+                       android:layout_alignParentEnd="true"
+                       android:alpha="0.8"
+                       android:src="@drawable/ic_refresh"
+                       android:contentDescription="TODO" />
+
+
+
+               </RelativeLayout>
+
+               <ScrollView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/bar"
+                   android:layout_below="@id/l1"
+
+                   android:background="@color/white"
+                   android:layout_marginStart="@dimen/_6sdp"
+                   android:layout_marginEnd="@dimen/_5sdp">
+
+
+                   <HorizontalScrollView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content">
+
+
+
+
+                       <LinearLayout
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:orientation="horizontal">
+
+                           <Button
+                               android:id="@+id/butedu"
+                               style="@style/Widget.AppCompat.Button.Borderless"
+                               android:layout_width="wrap_content"
+                               android:layout_height="@dimen/_30sdp"
+                               android:layout_marginBottom="@dimen/_8sdp"
+                               android:padding="@dimen/_5sdp"
+                               android:background="@drawable/custom_button4"
+                               android:fontFamily="@font/poppins"
+                               android:text="Education/News"
+                               android:textAlignment="center"
+                               android:textColor="#272727"
+                               android:textSize="8sp" />
+
+                           <Button
+                               android:id="@+id/butfashion"
+                               style="@style/Widget.AppCompat.Button.Borderless"
+                               android:layout_width="wrap_content"
+                               android:layout_height="@dimen/_30sdp"
+                               android:layout_marginLeft="@dimen/_5sdp"
+                               android:padding="@dimen/_5sdp"
+
+                               android:layout_toEndOf="@id/butedu"
+                               android:background="@drawable/custom_button4"
+                               android:fontFamily="@font/poppins"
+                               android:text="Fashion/Beauty"
+                               android:textAlignment="center"
+                               android:textColor="#272727"
+                               android:textSize="8sp" />
+
+
+                           <Button
+                               android:id="@+id/butfood"
+                               style="@style/Widget.AppCompat.Button.Borderless"
+                               android:layout_width="wrap_content"
+                               android:layout_height="@dimen/_30sdp"
+                               android:layout_below="@id/lf"
+                               android:padding="@dimen/_5sdp"
+
+                               android:layout_marginLeft="@dimen/_5sdp"
+                               android:layout_toEndOf="@id/butfashion"
+                               android:background="@drawable/custom_button4"
+                               android:fontFamily="@font/poppins"
+                               android:text="Food"
+                               android:textAlignment="inherit"
+                               android:textColor="#272727"
+                               android:textSize="10sp" />
+
+                           <Button
+                               android:id="@+id/butfiction"
+                               style="@style/Widget.AppCompat.Button.Borderless"
+                               android:layout_width="wrap_content"
+                               android:layout_height="@dimen/_30sdp"
+                               android:layout_below="@id/lf"
+                               android:layout_marginLeft="@dimen/_5sdp"
+                               android:padding="@dimen/_5sdp"
+
+                               android:layout_toEndOf="@+id/butfood"
+                               android:background="@drawable/custom_button4"
+                               android:fontFamily="@font/poppins"
+                               android:text="Fiction/Fantasy"
+                               android:textAlignment="center"
+                               android:textColor="#272727"
+                               android:textSize="8sp" />
+
+                           <Button
+                               android:id="@+id/butfun"
+                               style="@style/Widget.AppCompat.Button.Borderless"
+                               android:layout_width="wrap_content"
+                               android:layout_height="@dimen/_30sdp"
+                               android:layout_below="@id/lf"
+                               android:layout_marginLeft="@dimen/_5sdp"
+                               android:padding="@dimen/_5sdp"
+
+                               android:layout_toEndOf="@+id/butfiction"
+                               android:background="@drawable/custom_button4"
+                               android:fontFamily="@font/poppins"
+                               android:text="Humour/Fun"
+                               android:textAlignment="center"
+                               android:textColor="#272727"
+                               android:textSize="8sp" />
+
+                           <Button
+                               android:id="@+id/butmusic"
+                               style="@style/Widget.AppCompat.Button.Borderless"
+                               android:layout_width="wrap_content"
+                               android:layout_height="@dimen/_30sdp"
+                               android:layout_below="@id/lf"
+                               android:layout_marginLeft="@dimen/_5sdp"
+                               android:padding="@dimen/_5sdp"
+
+                               android:layout_toEndOf="@+id/butfun"
+                               android:background="@drawable/custom_button4"
+                               android:fontFamily="@font/poppins"
+                               android:text="Music/Dance"
+                               android:textAlignment="center"
+                               android:textColor="#272727"
+                               android:textSize="8sp" />
+
+                           <Button
+                               android:id="@+id/butmovie"
+                               style="@style/Widget.AppCompat.Button.Borderless"
+                               android:layout_width="wrap_content"
+                               android:layout_height="@dimen/_30sdp"
+                               android:layout_below="@id/lf"
+                               android:layout_marginLeft="@dimen/_5sdp"
+                               android:padding="@dimen/_5sdp"
+
+                               android:layout_toEndOf="@+id/butmusic"
+                               android:background="@drawable/custom_button4"
+                               android:fontFamily="@font/poppins"
+                               android:text="Movies/TV shows"
+                               android:textAlignment="center"
+                               android:textColor="#272727"
+                               android:textSize="8sp" />
+
+                           <Button
+                               android:id="@+id/butphoto"
+                               style="@style/Widget.AppCompat.Button.Borderless"
+                               android:layout_width="wrap_content"
+                               android:layout_height="@dimen/_30sdp"
+                               android:layout_below="@id/lf"
+                               android:layout_marginLeft="@dimen/_5sdp"
+                               android:padding="@dimen/_5sdp"
+
+                               android:layout_toEndOf="@+id/butmovie"
+                               android:background="@drawable/custom_button4"
+                               android:fontFamily="@font/poppins"
+                               android:text="Photography/Videography"
+                               android:textAlignment="center"
+                               android:textColor="#272727"
+                               android:textSize="8sp" />
+
+                           <Button
+                               android:id="@+id/butsci"
+                               style="@style/Widget.AppCompat.Button.Borderless"
+                               android:layout_width="wrap_content"
+                               android:layout_height="@dimen/_30sdp"
+                               android:layout_below="@id/lf"
+                               android:layout_marginLeft="@dimen/_5sdp"
+                               android:padding="@dimen/_5sdp"
+
+                               android:layout_toEndOf="@+id/butphoto"
+                               android:background="@drawable/custom_button4"
+                               android:fontFamily="@font/poppins"
+                               android:text="Science/Technology"
+                               android:textAlignment="center"
+                               android:textColor="#272727"
+                               android:textSize="8sp" />
+
+                           <Button
+                               android:id="@+id/butstories"
+                               style="@style/Widget.AppCompat.Button.Borderless"
+                               android:layout_width="wrap_content"
+                               android:layout_height="@dimen/_30sdp"
+                               android:layout_below="@id/lf"
+                               android:layout_marginLeft="@dimen/_5sdp"
+                               android:padding="@dimen/_5sdp"
+
+                               android:layout_toEndOf="@+id/butsci"
+                               android:background="@drawable/custom_button4"
+                               android:fontFamily="@font/poppins"
+                               android:text="Stories/Confessions"
+                               android:textAlignment="center"
+                               android:textColor="#272727"
+                               android:textSize="8sp" />
+
+                           <Button
+                               android:id="@+id/butsports"
+                               style="@style/Widget.AppCompat.Button.Borderless"
+                               android:layout_width="wrap_content"
+                               android:layout_height="@dimen/_30sdp"
+                               android:layout_below="@id/lf"
+                               android:layout_marginLeft="@dimen/_5sdp"
+                               android:padding="@dimen/_5sdp"
+
+                               android:layout_toEndOf="@+id/butstories"
+                               android:background="@drawable/custom_button4"
+                               android:fontFamily="@font/poppins"
+                               android:text="Sports/Fitness"
+                               android:textAlignment="center"
+                               android:textColor="#272727"
+                               android:textSize="8sp" />
+
+                           <Button
+                               android:id="@+id/buttravel"
+                               style="@style/Widget.AppCompat.Button.Borderless"
+                               android:layout_width="wrap_content"
+                               android:layout_height="@dimen/_30sdp"
+                               android:layout_below="@id/lf"
+                               android:layout_marginLeft="@dimen/_5sdp"
+                               android:padding="@dimen/_5sdp"
+
+                               android:layout_toEndOf="@+id/butsports"
+                               android:background="@drawable/custom_button4"
+                               android:fontFamily="@font/poppins"
+                               android:text="Travel"
+                               android:textAlignment="inherit"
+                               android:textColor="#272727"
+                               android:textSize="10sp" />
+
+                           <Button
+                               android:id="@+id/butquote"
+                               style="@style/Widget.AppCompat.Button.Borderless"
+                               android:layout_width="wrap_content"
+                               android:layout_height="@dimen/_30sdp"
+                               android:layout_below="@id/lf"
+                               android:layout_marginLeft="@dimen/_5sdp"
+                               android:padding="@dimen/_5sdp"
+
+                               android:layout_toEndOf="@+id/buttravel"
+                               android:background="@drawable/custom_button4"
+                               android:fontFamily="@font/poppins"
+                               android:text="Thoughts/Quotes"
+                               android:textAlignment="center"
+                               android:textColor="#272727"
+                               android:textSize="8sp" />
+
+                           <Button
+                               android:id="@+id/butother"
+                               style="@style/Widget.AppCompat.Button.Borderless"
+                               android:layout_width="wrap_content"
+                               android:layout_height="@dimen/_30sdp"
+                               android:layout_below="@id/lf"
+                               android:layout_marginLeft="@dimen/_5sdp"
+                               android:layout_toEndOf="@+id/buttravel"
+                               android:background="@drawable/custom_button4"
+                               android:fontFamily="@font/poppins"
+                               android:text="Other"
+                               android:padding="@dimen/_5sdp"
+
+                               android:textAlignment="inherit"
+                               android:textColor="#272727"
+                               android:textSize="10sp" />
+
+
+                       </LinearLayout>
+
+                   </HorizontalScrollView>
+
+               </ScrollView>
+
+
+
+
+
+           </RelativeLayout>
+
+       </androidx.appcompat.widget.Toolbar>
+
+   </com.google.android.material.appbar.AppBarLayout>
+
+
+
+<androidx.viewpager.widget.ViewPager
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainPager"
+    android:layout_below="@+id/bar"/>
+
+
+
+
+    <ImageView
+        android:id="@+id/butaddp"
+
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/_15sdp"
+        android:src="@drawable/ic_naddp" />
+
+
+
+</RelativeLayout>

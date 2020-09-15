@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+
+    tools:context=".Fragment.BookmarkFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bar"
+        tools:ignore="InvalidId"
+        android:background="#F7F7F7">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="#F7F7F7"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            app:contentInsetStartWithNavigation="0dp">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/sp"
+                    android:layout_marginStart="@dimen/_7sdp"
+                    android:id="@+id/lf">
+
+                    <TextView
+                        android:id="@+id/known"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/l1"
+                        android:layout_centerVertical="true"
+                        android:alpha="1"
+                        android:clickable="true"
+                        android:fontFamily="@font/poppins"
+
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_8sdp"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:paddingRight="@dimen/_10sdp"
+                        android:text="Known"
+                        android:textAlignment="center"
+                        android:textColor="#272727"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:id="@+id/anonymous"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:fontFamily="@font/poppins"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_8sdp"
+                        android:paddingBottom="@dimen/_10sdp"
+                        android:paddingRight="@dimen/_10sdp"
+                        android:alpha="0.6"
+                        android:layout_centerVertical="true"
+                        android:textStyle="bold"
+
+                        android:layout_toEndOf="@+id/known"
+                        android:text="Anonymous"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textColor="#272727"
+                        android:textSize="16sp" />
+
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/bar"
+        android:id="@+id/mainPager"
+        />
+
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/recycler_view_saves"
+                android:layout_below="@id/bar"
+                android:visibility="gone"
+
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_marginLeft="@dimen/_6sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:layout_marginRight="@dimen/_6sdp"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:id="@+id/recycler_view_saves1"
+                android:layout_below="@id/bar"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_marginLeft="@dimen/_6sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:layout_marginRight="@dimen/_6sdp"
+
+                />
+
+
+</RelativeLayout>

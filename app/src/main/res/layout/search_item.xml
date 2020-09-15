@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_8sdp">
+
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_18sdp"
+        android:background="@drawable/card_bg"
+        android:paddingBottom="@dimen/_16sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <com.wajahatkarim3.easyflipview.EasyFlipView
+            android:layout_width="match_parent"
+            android:id="@+id/flipView"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginLeft="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            app:flipOnTouch="false"
+            app:flipEnabled="true"
+            app:flipDuration="400"
+            app:flipType="vertical"
+            app:flipFrom="front">
+
+            <!-- Back Layout Goes Here -->
+            <TextView
+
+                android:id="@+id/tv_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:text="Simple Username Text "
+                android:textColor="#272727"
+                android:textStyle="bold"
+                android:alpha="0.8"/>
+
+            <!-- Front Layout Goes Here -->
+            <TextView
+
+                android:id="@+id/category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_slab"
+                android:text="Category "
+                android:textColor="#272727"
+                android:textStyle="bold"
+                android:alpha="0.8"/>
+
+
+        </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="@dimen/_125sdp"
+            android:layout_height="@dimen/_130sdp"
+            android:layout_below="@id/flipView"
+            android:layout_alignStart="@+id/flipView"
+            android:layout_alignLeft="@id/flipView"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:fontFamily="@font/roboto_slab"
+            android:lineSpacingExtra="@dimen/_8sdp"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
+            android:textColor="@color/content_text_color"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_marginRight="@dimen/_8sdp"
+            android:fontFamily="@font/poppins"
+            android:text="TextView"
+            android:textColor="@color/content_text_color" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/post_image"
+            android:layout_width="@dimen/_125sdp"
+            android:layout_height="@dimen/_130sdp"
+            android:layout_below="@id/tv_date"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_marginRight="@dimen/_8sdp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@mipmap/ic_launcher" />
+
+    </RelativeLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_user"
+        android:layout_width="@dimen/_32sdp"
+        android:layout_height="@dimen/_32sdp"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:layout_marginLeft="@dimen/_6sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginEnd="@dimen/_6sdp"
+        android:layout_marginRight="@dimen/_6sdp"
+        app:layout_constraintEnd_toStartOf="@+id/container"
+        app:layout_constraintStart_toStartOf="@+id/container"
+        app:layout_constraintTop_toTopOf="@+id/container"
+        app:srcCompat="@mipmap/ic_launcher" />
+</androidx.constraintlayout.widget.ConstraintLayout>

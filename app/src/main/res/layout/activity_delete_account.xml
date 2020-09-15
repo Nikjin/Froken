@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".EditPostsActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bar"
+        tools:ignore="InvalidId"
+        android:background="#F7F7F7">
+
+        <Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:background="#F7F7F7">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F7F7F7">
+
+
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_centerVertical="true"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:background="@drawable/ic_backarrow" />
+
+
+                <TextView
+                    android:id="@+id/sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_toEndOf="@+id/back"
+                    android:fontFamily="@font/poppins"
+                    android:text="Deactivate Account"
+                    android:textAlignment="center"
+                    android:textColor="#333333"
+                    android:textSize="25sp" />
+
+
+
+            </RelativeLayout>
+        </Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:fontFamily="@font/roboto_slab"
+        android:text="Froken"
+        android:textColor="#513DA3"
+        android:textSize="40sp"
+        />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:fontFamily="@font/poppins"
+        android:text="We'll miss you..."
+        android:drawableRight="@drawable/ic_sad_purple"
+        android:drawablePadding="10dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:fontFamily="@font/poppins"
+        android:text="Are you sure you wanna leave?"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        />
+
+
+
+
+
+
+        <ImageView
+            android:id="@+id/imageCheck"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:background="@drawable/ic_check_purple" />
+
+
+
+
+    <Button
+        android:id="@+id/butCheck"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:background="@drawable/custom_button5"
+
+        android:fontFamily="sans-serif"
+        android:text="yes"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        />
+
+
+
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>

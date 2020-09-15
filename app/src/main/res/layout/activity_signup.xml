@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/custom_splash"
+    tools:context=".SignupActivity">
+
+    <TextView
+        android:id="@+id/textsignin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:fontFamily="@font/roboto"
+        android:text="Sign in"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/setup_profile_image"
+        android:layout_width="@dimen/_115sdp"
+        android:layout_height="@dimen/_115sdp"
+        android:layout_marginStart="@dimen/_18sdp"
+        android:layout_marginTop="@dimen/_35sdp"
+        android:src="@drawable/signuplady"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_18sdp"
+        android:layout_marginTop="@dimen/_18sdp"
+        android:fontFamily="@font/poppins"
+        android:text="Create your account"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setup_profile_image"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/editname"
+        android:layout_width="@dimen/_247sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_18sdp"
+        android:layout_marginTop="@dimen/_27sdp"
+        android:drawableLeft="@drawable/ic_person"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="Full Name"
+        android:inputType="textPersonName"
+        android:paddingBottom="18dp"
+        android:textColor="#FEFEFE"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        tools:ignore="MissingConstraints" />
+
+
+    <EditText
+        android:id="@+id/editemail"
+        android:layout_width="@dimen/_247sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_18sdp"
+        android:layout_marginTop="@dimen/_11sdp"
+        android:drawableLeft="@drawable/ic_mail_white"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="Email"
+
+        android:inputType="textEmailAddress"
+        android:paddingBottom="18dp"
+        android:textColor="#FEFEFE"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editname"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/editpass"
+        android:layout_width="@dimen/_247sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_18sdp"
+        android:layout_marginTop="@dimen/_11sdp"
+        android:drawableLeft="@drawable/ic_pass_white"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+
+        android:paddingBottom="@dimen/_12sdp"
+        android:textColor="#FEFEFE"
+
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editemail"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/meter"
+        app:layout_constraintBottom_toTopOf="@+id/login_instructions"
+        app:layout_constraintEnd_toEndOf="parent"
+
+
+        tools:ignore="MissingConstraints">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:layout_marginStart="@dimen/_8sdp"
+            android:indeterminate="false"
+            android:maxHeight="20dip"
+            android:minHeight="20dip"
+            android:progress="0" />
+
+        <TextView
+            android:id="@+id/password_strength"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginEnd="@dimen/_10sdp"
+
+            android:text="Weak" />
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/login_instructions"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_18sdp"
+
+        android:layout_marginTop="@dimen/_27sdp"
+        android:alpha=".7"
+        android:fontFamily="@font/poppins"
+        android:text="Your password must be at least 8 characters. With at least 1 number and 1 special character"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editpass" />
+
+    <EditText
+        android:id="@+id/editcpass"
+        android:layout_width="@dimen/_247sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_18sdp"
+        android:layout_marginTop="@dimen/_11sdp"
+        android:ems="10"
+        android:hint="Confirm password"
+        android:inputType="textPassword"
+        android:paddingLeft="@dimen/_25sdp"
+        android:paddingBottom="@dimen/_9sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_instructions"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/butreg"
+        android:layout_width="@dimen/_180sdp"
+        android:layout_height="@dimen/_32sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_18sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:background="@drawable/custom_button3"
+        android:fontFamily="sans-serif"
+        android:text="Register"
+        android:textColor="#FBFBFB"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editcpass"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".PostActivity">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:id="@+id/bar">
+        
+        
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:id="@+id/toolbar">
+            
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/r1">
+
+
+                <ImageView
+                    android:id="@+id/arr"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+
+                    android:src="@drawable/ic_backarrow" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_50sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_toEndOf="@+id/arr"
+                    android:fontFamily="@font/poppins"
+
+
+                    android:text="New Post"
+                    android:textColor="@android:color/black"
+                    android:textSize="28sp" />
+                
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+        
+        
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/bar">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bar">
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:background="#EEEEEE"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:id="@+id/line"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:id="@+id/r1">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:id="@+id/cprofile"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:src="@mipmap/ic_launcher"/>
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_22sdp"
+                android:layout_toEndOf="@+id/cprofile"
+                android:fontFamily="@font/poppins"
+                android:text="Nikhil Jindal"
+                android:textColor="#513DA3"
+                android:textSize="20sp" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edittitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/name"
+                android:layout_marginStart="@dimen/_13sdp"
+                android:layout_toEndOf="@+id/cprofile"
+                app:errorEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    android:layout_below="@+id/name"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/poppins"
+                    android:hint="Title"
+                    android:textColor="@android:color/black"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+        </RelativeLayout>
+
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:background="#EEEEEE"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_below="@id/r1"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:id="@+id/line4"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/line4"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:id="@+id/cr">
+
+            <TextView
+                android:id="@+id/category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:fontFamily="@font/poppins"
+                android:text="Category  :"
+                android:textSize="25sp" />
+
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:layout_toEndOf="@id/category"
+                android:spinnerMode="dropdown">
+
+            </Spinner>
+
+        </RelativeLayout>
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:background="#EEEEEE"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:id="@+id/line5"
+            android:layout_below="@id/cr"
+            android:layout_marginTop="@dimen/_15sdp"/>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:id="@+id/sb"
+            android:layout_below="@id/line5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.hendraanggrian.appcompat.widget.SocialAutoCompleteTextView
+                android:id="@+id/desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/poppins"
+                app:hyperlinkColor="@color/title_text_color"
+                app:hashtagColor="@color/title_text_color"
+                app:mentionColor="@color/title_text_color"
+                android:hint="Confession/Blog..."
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:background="#EEEEEE"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:id="@+id/line6"
+            android:layout_below="@id/sb"
+            android:layout_marginTop="@dimen/_15sdp"/>
+
+        <TextView
+            android:id="@+id/select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_below="@id/line6"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:hint="Select appropriate photos to best describe your post"
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/select"
+            android:id="@+id/plus"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:src="@drawable/addphoto" />
+
+        <Button
+            android:id="@+id/butshare"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_below="@+id/plus"
+            android:background="#513DA3"
+            android:layout_marginTop="@dimen/_5sdp"
+
+            android:text="Share"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

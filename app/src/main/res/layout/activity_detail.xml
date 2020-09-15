@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F7F7">
+
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F7F7F7"
+        android:id="@+id/bar">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F7F7F7"
+            android:id="@+id/toolbar">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F9F9F9"
+
+                android:id="@+id/r1">
+
+
+                <ImageView
+                    android:id="@+id/arr"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:src="@drawable/ic_backarrow"
+                    android:layout_centerVertical="true"
+                    />
+
+                <ImageView
+                    android:id="@+id/save"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/_9sdp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_book" />
+
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bar">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="35dp"
+            android:layout_marginTop="-30dp"
+            android:id="@+id/card">
+
+
+        <ImageView
+            android:id="@+id/post_image"
+            android:scaleType="fitXY"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/image" />
+
+        </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:id="@id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card"
+                android:layout_marginStart="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_30sdp"
+                android:fontFamily="@font/roboto_slab"
+                android:text="A look into collaborative wireframing process"
+                android:textAlignment="textStart"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
+
+            <RelativeLayout
+                android:id="@+id/r1"
+                android:layout_width="@dimen/_372sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_below="@+id/title"
+                android:layout_marginStart="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                tools:ignore="DuplicateIds">
+
+
+                <com.wajahatkarim3.easyflipview.EasyFlipView
+                    android:layout_width="match_parent"
+                    android:id="@+id/flipView"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_toLeftOf="@+id/listen"
+                    app:flipOnTouch="false"
+                    app:flipEnabled="true"
+                    app:flipDuration="400"
+                    app:flipType="vertical"
+                    app:flipFrom="front">
+
+                    <!-- Back Layout Goes Here -->
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/image_profile"
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+
+                            android:src="@mipmap/ic_launcher" />
+
+                        <TextView
+                            android:id="@+id/username"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_18sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_toEndOf="@+id/image_profile"
+
+                            android:fontFamily="@font/poppins"
+                            android:text="Username"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/username"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:layout_toEndOf="@+id/image_profile"
+
+                            android:fontFamily="@font/poppins"
+                            android:text="3 march
+"
+                            android:textSize="10sp" />
+
+                    </RelativeLayout>
+
+
+                    <!-- Front Layout Goes Here -->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+
+                        android:background="@drawable/flip_card_view">
+
+                        <TextView
+                            android:id="@+id/cat1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/roboto_slab"
+                            android:textSize="18sp" />
+
+
+
+
+
+                    </RelativeLayout>
+
+
+
+                </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+
+
+
+
+            <ImageView
+                    android:id="@+id/listen"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_notlisten" />
+
+
+            </RelativeLayout>
+
+            <com.hendraanggrian.appcompat.widget.SocialTextView
+                android:id="@+id/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/r1"
+                android:layout_marginStart="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_30sdp"
+                app:hyperlinkColor="@color/title_text_color"
+                app:hashtagColor="@color/title_text_color"
+                app:mentionColor="@color/title_text_color"
+                android:fontFamily="@font/poppins"
+
+
+                android:text="Wireframing is a critical step in design—for you, for developers, for copywriters, and for anyone else who needs to understand your design. With all those people needing access, wouldn’t you want to work collaboratively from the get-go?Why bother making a wireframe collaboratively? "
+                android:textAlignment="textStart"
+                android:textColor="#333333"
+                android:textSize="16sp" />
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_below="@+id/description"
+                android:background="#EEEEEE"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:id="@+id/line"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:id="@+id/r2">
+
+                <com.wajahatkarim3.easyflipview.EasyFlipView
+                    android:layout_width="match_parent"
+                    android:id="@+id/flipView1"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/like"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    app:flipOnTouch="false"
+                    app:flipEnabled="true"
+                    app:flipDuration="400"
+                    app:flipType="vertical"
+                    app:flipFrom="front">
+
+                    <!-- Back Layout Goes Here -->
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/like_profile1"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_margin="@dimen/_10sdp"
+                            android:src="@mipmap/ic_launcher" />
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/like_profile2"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginStart="-24dp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:layout_toEndOf="@+id/like_profile1"
+                            android:src="@mipmap/ic_launcher" />
+
+                        <TextView
+                            android:id="@+id/lb"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_9sdp"
+                            android:layout_toEndOf="@+id/like_profile2"
+                            android:fontFamily="@font/poppins"
+                            android:text="Liked by"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/likes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/lb"
+                            android:layout_toEndOf="@+id/like_profile2"
+                            android:fontFamily="@font/poppins"
+                            android:text="Liked by"
+                            android:textColor="#333333"
+                            android:textSize="12sp"
+                            tools:text="You and 20 others" />
+
+                    </RelativeLayout>
+
+
+
+                    <!-- Front Layout Goes Here -->
+                   <RelativeLayout
+                       android:layout_width="wrap_content"
+                       android:layout_height="@dimen/_30sdp"
+                       android:layout_margin="@dimen/_10sdp"
+
+                       android:background="@drawable/flip_card_view">
+
+                       <TextView
+                           android:id="@+id/lc"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_centerVertical="true"
+                           android:fontFamily="@font/roboto_slab"
+                           android:text="Likes and Comments are disabled"
+                           android:textSize="14sp" />
+
+
+                   </RelativeLayout>
+
+
+                </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+
+
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:id="@+id/like"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_24sdp"
+                    android:src="@drawable/ic_like"/>
+
+
+            </RelativeLayout>
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:layout_below="@+id/r2"
+                android:background="#EEEEEE"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:id="@+id/line1"/>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line1"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:id="@+id/recycler_view"
+                tools:ignore="NotSibling"
+                android:layout_marginBottom="@dimen/_80sdp">
+
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+            <com.google.android.material.bottomappbar.BottomAppBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="BottomAppBar"
+                android:id="@+id/bbar"
+                android:background="#F7F7F7"
+
+
+                android:layout_marginTop="@dimen/_70sdp"
+                android:layout_alignParentBottom="true">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:contentInsetLeft="0dp"
+                    app:contentInsetStart="0dp"
+                    android:background="#F7F7F7"
+
+                    app:contentInsetStartWithNavigation="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_60sdp">
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/comment_profile"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/ic_launcher" />
+
+
+                    <EditText
+                        android:id="@+id/addcomment"
+                        android:layout_width="@dimen/_205sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_toRightOf="@+id/comment_profile"
+                        android:background="@drawable/custom_type"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:hint="Type a comment..."
+                        android:textAlignment="viewStart"
+                        android:textSize="12sp"
+                        tools:ignore="RtlCompat" />
+
+
+                    <ImageButton
+                        android:id="@+id/post"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_toRightOf="@+id/addcomment"
+                        android:background="@drawable/ic_send" />
+
+
+
+
+
+                </RelativeLayout>
+
+                </androidx.appcompat.widget.Toolbar>
+
+
+            </com.google.android.material.bottomappbar.BottomAppBar>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progress_circular"
+        android:layout_centerInParent="true"/>
+
+
+
+
+
+
+
+
+
+</RelativeLayout>
