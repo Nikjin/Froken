@@ -16,4 +16,21 @@ Froken is a dummy micro blogging platform which provides you a safe milieu to ex
 - Android Studio - JAVA
 - Firebase (Realtime Database, Authentication, Analytics, Storage)
 
+## Sample UI Screenshots
+### Profile Screen 
+
+![Profile Screen](https://github.com/Nikjin/Froken/blob/master/froken1.png)
+
+### Shared Post
+
+![Profile Screen](https://github.com/Nikjin/Froken/blob/master/froken2.png)
+
+### Saved Posts
+
+![Profile Screen](https://github.com/Nikjin/Froken/blob/master/froken3.png)
+
+### Explore Page
+
+![Profile Screen](https://github.com/Nikjin/Froken/blob/master/froken4.png)
+
 
